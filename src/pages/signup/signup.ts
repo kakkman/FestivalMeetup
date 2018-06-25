@@ -5,6 +5,7 @@ import { NavController } from 'ionic-angular';
 import { AuthService } from '../../services/auth.service';
 
 import { TabsPage } from '../tabs/tabs';
+import { GroupsPage } from '../groups/groups';
 
 @Component({
 	selector: 'as-page-signup',
@@ -32,7 +33,7 @@ export class SignupPage {
 			password: data.password
 		};
 		this.auth.signUp(credentials).then(
-			() => this.navCtrl.setRoot(TabsPage),
+			() => this.navCtrl.setRoot(GroupsPage),
 			error => this.signupError = error.message
 		);
 	}

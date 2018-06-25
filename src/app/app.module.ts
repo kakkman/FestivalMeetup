@@ -19,6 +19,7 @@ import { AuthService } from '../services/auth.service';
 //additional pages
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
+import { GroupsPage } from '../pages/groups/groups';
 
 import { NgxErrorsModule } from '@ultimate/ngxerrors';
 
@@ -32,7 +33,8 @@ import { NgxErrorsModule } from '@ultimate/ngxerrors';
     HomePage,
     TabsPage,
     LoginPage,
-    SignupPage
+    SignupPage,
+    GroupsPage,
   ],
   imports: [
     BrowserModule,
@@ -48,7 +50,8 @@ import { NgxErrorsModule } from '@ultimate/ngxerrors';
     HomePage,
     TabsPage,
     LoginPage,
-    SignupPage
+    SignupPage,
+    GroupsPage
   ],
   providers: [
     StatusBar,

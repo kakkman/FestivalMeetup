@@ -5,6 +5,7 @@ import { TabsPage } from '../tabs/tabs';
 import { AuthService } from '../../services/auth.service';
 
 import { SignupPage } from '../signup/signup';
+import { GroupsPage } from '../groups/groups';
 
 @Component({
   selector: 'page-login',
@@ -35,16 +36,24 @@ export class LoginPage {
 			email: data.email,
 			password: data.password
 		};
-		this.auth.signInWithEmail(credentials)
-			.then(
-				() => this.navCtrl.setRoot(TabsPage),
-				error => this.loginError = error.message
-			);
+
+		this.auth.signInWithEmail(credentials).then(() => {
+			this.navCtrl.setRoot(GroupsPage);
+		},
+		error => {
+			this.loginError = error.message;
+		});
 	}
+
+	/*loginWithGoogle() {
+  this.auth.signInWithGoogle()
+    .then(
+      () => this.navCtrl.setRoot(HomePage),
+      error => console.log(error.message)
+    );
+	} */
 
 	signup(){
   	this.navCtrl.push(SignupPage);
 	}
-
-
 }

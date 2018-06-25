@@ -4,6 +4,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { TabsPage } from '../pages/tabs/tabs';
+import { GroupsPage } from '../pages/groups/groups';
 import { LoginPage } from '../pages/login/login';
 import { AuthService } from '../services/auth.service';
 
@@ -25,11 +26,9 @@ export class MyApp {
       splashScreen.hide();
     });
 
-    this.auth.afAuth.authState
-    .subscribe(
-      user => {
+    this.auth.afAuth.authState.subscribe( user => {
         if (user) {
-          this.rootPage = TabsPage;
+          this.rootPage = GroupsPage;
         } else {
           this.rootPage = LoginPage;
         }
@@ -39,6 +38,5 @@ export class MyApp {
       }
     );
   }
-
-
+  
 }
