@@ -3,10 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
-import { HomePage } from '../pages/home/home';
-import { TabsPage } from '../pages/tabs/tabs';
+import { AboutPage } from '../pages/landing/about/about';
+import { ContactPage } from '../pages/landing/contact/contact';
+import { HomePage } from '../pages/landing/home/home';
+import { TabsPage } from '../pages/landing/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -17,9 +17,10 @@ import { firebaseConfig } from './config';
 import { AuthService } from '../services/auth.service';
 
 //additional pages
-import { LoginPage } from '../pages/login/login';
-import { SignupPage } from '../pages/signup/signup';
-import { GroupsPage } from '../pages/groups/groups';
+import { LoginPage } from '../pages/user-authentication/login/login';
+import { SignupPage } from '../pages/user-authentication/signup/signup';
+import { GroupListPage } from '../pages/groups/group-list/group-list';
+import { GroupCreatePage } from '../pages/groups/group-create/group-create';
 
 import { NgxErrorsModule } from '@ultimate/ngxerrors';
 
@@ -34,7 +35,8 @@ import { NgxErrorsModule } from '@ultimate/ngxerrors';
     TabsPage,
     LoginPage,
     SignupPage,
-    GroupsPage,
+    GroupListPage,
+    GroupCreatePage,
   ],
   imports: [
     BrowserModule,
@@ -51,7 +53,8 @@ import { NgxErrorsModule } from '@ultimate/ngxerrors';
     TabsPage,
     LoginPage,
     SignupPage,
-    GroupsPage
+    GroupCreatePage,
+    GroupListPage
   ],
   providers: [
     StatusBar,

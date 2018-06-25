@@ -3,9 +3,11 @@ import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { TabsPage } from '../pages/tabs/tabs';
-import { GroupsPage } from '../pages/groups/groups';
-import { LoginPage } from '../pages/login/login';
+import { TabsPage } from '../pages/landing/tabs/tabs';
+import { GroupListPage } from '../pages/groups/group-list/group-list';
+import { GroupCreatePage } from '../pages/groups/group-create/group-create';
+
+import { LoginPage } from '../pages/user-authentication/login/login';
 import { AuthService } from '../services/auth.service';
 
 @Component({
@@ -28,7 +30,7 @@ export class MyApp {
 
     this.auth.afAuth.authState.subscribe( user => {
         if (user) {
-          this.rootPage = GroupsPage;
+          this.rootPage = GroupListPage;
         } else {
           this.rootPage = LoginPage;
         }
@@ -38,5 +40,5 @@ export class MyApp {
       }
     );
   }
-  
+
 }
