@@ -3,7 +3,6 @@ import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { TabsPage } from '../pages/tabs/tabs';
 import { GroupListPage } from '../pages/groups/group-list/group-list';
 import { GroupCreatePage } from '../pages/groups/group-create/group-create';
 

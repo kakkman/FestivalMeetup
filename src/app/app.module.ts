@@ -6,7 +6,6 @@ import { MyApp } from './app.component';
 import { FriendsPage } from '../pages/friends/friends';
 import { ChecklistPage } from '../pages/checklist/checklist';
 import { MapPage } from '../pages/map/map';
-import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -30,7 +29,6 @@ import { NgxErrorsModule } from '@ultimate/ngxerrors';
     FriendsPage,
     ChecklistPage,
     MapPage,
-    TabsPage,
     LoginPage,
     SignupPage,
     GroupListPage,
@@ -48,7 +46,6 @@ import { NgxErrorsModule } from '@ultimate/ngxerrors';
     ChecklistPage,
     FriendsPage,
     MapPage,
-    TabsPage,
     LoginPage,
     SignupPage,
     GroupCreatePage,
