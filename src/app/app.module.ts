@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-import { FriendsPage } from '../pages/friends/friends';
+import { ChatPage } from '../pages/chat/chat';
 import { ChecklistPage } from '../pages/checklist/checklist';
 import { MapPage } from '../pages/map/map';
 
@@ -26,7 +26,7 @@ import { NgxErrorsModule } from '@ultimate/ngxerrors';
 @NgModule({
   declarations: [
     MyApp,
-    FriendsPage,
+    ChatPage,
     ChecklistPage,
     MapPage,
     LoginPage,
@@ -44,7 +44,7 @@ import { NgxErrorsModule } from '@ultimate/ngxerrors';
   entryComponents: [
     MyApp,
     ChecklistPage,
-    FriendsPage,
+    ChatPage,
     MapPage,
     LoginPage,
     SignupPage,
