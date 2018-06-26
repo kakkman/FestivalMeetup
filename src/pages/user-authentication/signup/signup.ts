@@ -4,7 +4,6 @@ import { NavController } from 'ionic-angular';
 
 import { AuthService } from '../../../services/auth.service';
 
-import { TabsPage } from '../../landing/tabs/tabs';
 import { GroupListPage } from '../../groups/group-list/group-list';
 
 @Component({
