@@ -7,11 +7,7 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
+      <!-- @ionicframework
 
       last time active, add or remove people from the group, click to see last known location?
 
@@ -28,7 +24,25 @@
       add and remove people,
       list of people
        change picture on right menu
+-->
 
-    </ion-item>
+  <ion-list>
+    <ion-card *ngFor=" let messages of chatmessages">
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="{{userprofile.whatever}}" > 
+        </ion-avatar>
+        <p>{{message.text}}</p>
+      </ion-item>
+    </ion-card>
   </ion-list>
 </ion-content>
+<ion-footer>
+  <ion-item>
+    <ion-input placeholder="Send Message...">
+    </ion-input>
+    <button ion-button clear icon-only item-right (click)="sendMsg()">
+      <ion-icon name="ios-send" ios="ios-send" md="md-send"></ion-icon>
+    </button>
+  </ion-item>
+</ion-footer>
